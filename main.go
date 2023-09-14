@@ -124,6 +124,7 @@ func displayBuildTag() {
 	logger.L().Info(fmt.Sprintf("Image version: %s", os.Getenv("RELEASE")))
 }
 
+
 func initHttpHandlers(clusterConfig utilsmetadata.ClusterConfig, eventReceiverRestURL string) {
 	mainhandler.KubescapeHttpClient = utils.InitHttpClient(clusterConfig.KubescapeURL)
 	mainhandler.VulnScanHttpClient = utils.InitHttpClient(clusterConfig.KubevulnURL)
